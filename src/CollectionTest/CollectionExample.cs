@@ -5,12 +5,12 @@ namespace CollectionTest
 {
     public class CollectionExample
     {
-        private Dictionary<int, List<String>> _dict;
+        private readonly Dictionary<int, List<String>> _dict;
         public Dictionary<int, List<String>> Dict
         {
             // return a copy so the client doesn't have access to the internal list
-            get { return new Dictionary<int, List<String>>(_dict); }
-            
+            // get { return new Dictionary<int, List<String>>(_dict); }
+            get { return _dict; }
         }
 
         public CollectionExample()
