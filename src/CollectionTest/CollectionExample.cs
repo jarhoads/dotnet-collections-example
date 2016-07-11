@@ -5,14 +5,11 @@ namespace CollectionTest
 {
     public class CollectionExample
     {
-        private readonly Dictionary<int, List<String>> _dict;
+        private Dictionary<int, List<String>> _dict;
         public Dictionary<int, List<String>> Dict
         {
             // return a copy so the client doesn't have access to the internal list
-            // get { return new Dictionary<int, List<String>>(_dict); }
-            // using this to show that using a readonly dictionary
-            // doesn't solve the problem
-            get { return _dict; }
+            get { return new Dictionary<int, List<String>>(_dict); }
             
         }
 
